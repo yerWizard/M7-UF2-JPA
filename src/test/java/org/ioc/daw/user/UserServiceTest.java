@@ -194,14 +194,14 @@ public class UserServiceTest {
         userService.create(usuario);
         userService.create(usuario2);
         userService.create(usuario3);
-        int maxrank = userService.findHighestRank();
+        User maxrank = userService.findHighestRank();
         entityTransaction.commit();
         
-        System.out.println(maxrank);
+       Assert.assertEquals((int)400, (int)maxrank.getRank());
+                
         
         
-        
-        
+            
     
     
     }

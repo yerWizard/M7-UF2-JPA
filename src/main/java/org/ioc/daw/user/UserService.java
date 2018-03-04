@@ -8,5 +8,5 @@ public interface UserService {
     public void remove(User user);
     public User findUserByUsername(String username);
     public List<User> findActiveUsers();
-    public int findHighestRank();
+    public User findHighestRank();
 }

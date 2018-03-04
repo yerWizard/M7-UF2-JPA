@@ -62,15 +62,15 @@ public class UserServiceImpl implements UserService {
        
     }
     
-    public int findHighestRank() throws NoResultException{
+    public User findHighestRank() throws NoResultException{
         
         try {
-            int usuario = (int) entityManager.createQuery("select max(o.rank) from User o").getSingleResult();
+            User usuario = (User) entityManager.createQuery("select object(o) from User o where o.rank = (select max(o.rank) from User o)").getSingleResult();
               return usuario;
        
         }catch(NoResultException excepcion){
         
-                return 0;
+                return null;
         }
        
     }
