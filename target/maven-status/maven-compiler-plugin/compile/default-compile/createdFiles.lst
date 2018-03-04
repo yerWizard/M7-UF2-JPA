@@ -1,0 +1,3 @@
+org\ioc\daw\user\UserService.class
+org\ioc\daw\user\impl\UserServiceImpl.class
+org\ioc\daw\user\User.class
